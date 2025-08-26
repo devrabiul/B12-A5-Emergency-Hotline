@@ -37,7 +37,44 @@ function copyText(text) {
         });
 }
 
+let totalCoin = 100;
+const appCoinCount = document.getElementById('app-coin-count');
+
 function generateHistory(serviceName, number) {
 
-    
+    if (totalCoin >= 20) {
+        
+        alert('Calling: ' + serviceName + ' - ' + number);
+
+        totalCoin -= 20;
+     
+        if (appCoinCount) {
+            appCoinCount.innerText = totalCoin;
+        }
+        
+        let time = new Date().toLocaleTimeString();
+        let container = document.getElementById('history-card-container');
+        if (container) {
+            let html = `<div class="history-card-item">
+                        <div class="content">
+                            <h6>${serviceName}</h6>
+                            <p>${number}</p>
+                        </div>
+                        <div class="time">${time}</div>
+                    </div>`;
+
+            container.innerHTML += html;
+        }
+
+    } else {
+        alert('Low amount of coin');
+        return 0;
+    }
+}
+
+function clearHistory() {
+    let container = document.getElementById('history-card-container');
+    if (container) {
+        container.innerHTML = '';
+    }
 }
