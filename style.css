@@ -8,6 +8,7 @@
 
 body {
     font-family: "Montserrat", sans-serif;
+    background-color: #F5FFF6;
 }
 
 header {
@@ -85,18 +86,6 @@ header .right-side .right-side-button.right-side-button-active {
     color: #FFFFFF;
 }
 
-@media (min-width: 992px) {
-    header .right-side .right-side-button {
-        width: 123px;
-        height: 52px;
-        font-size: 1rem;
-    }
-
-    header .right-side .right-side-button img {
-        --image-size: 30px;
-    }
-}
-
 .hero-section {
     display: flex;
     justify-content: center;
@@ -128,4 +117,237 @@ header .right-side .right-side-button.right-side-button-active {
     font-size: 1rem;
     font-weight: 500;
     text-align: center;
+}
+
+.main-section {
+    margin-top: 48px;
+}
+
+.main-section-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.card-section-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.card-item {
+    padding: 32px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+}
+
+.card-item .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.card-item .card-icon-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.card-item .card-icon {
+    border-radius: 1rem;
+    background-color: #FFE3E2;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-item .card-icon img {
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+}
+
+.card-item .card-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #111111;
+    margin-bottom: 8px;
+}
+
+.card-item .card-sub-title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #5C5C5C;
+}
+
+.card-item .card-phone {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    color: #111111;
+}
+
+.card-item .card-badge {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    gap: 10px;
+
+    width: 103px;
+    height: 37px;
+    background: #F2F2F2;
+    color: #5C5C5C;
+    border-radius: 9999px;
+}
+
+.card-item .card-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    width: 100%;
+}
+
+.card-item .card-footer .copy-btn,
+.card-item .card-footer .call-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    gap: 6px;
+    color: #5C5C5C;
+    background: #FFFFFF;
+    border: 1px solid #D4D6D5;
+    border-radius: 8px;
+    width: 50%;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.card-item .card-footer .copy-btn img {
+    width: 18px;
+    opacity: .75;
+}
+
+.card-item .card-footer .call-btn {
+    color: #FFFFFF;
+    background: #00A63E;
+}
+
+.card-item .card-footer .call-btn img {
+    filter: invert(1);
+    width: 18px;
+}
+
+@media (min-width: 992px) {
+    header .right-side .right-side-button {
+        width: 123px;
+        height: 52px;
+        font-size: 1rem;
+    }
+
+    header .right-side .right-side-button img {
+        --image-size: 30px;
+    }
+
+    .main-section-row {
+        grid-template-columns: repeat(4, 1fr);
+
+    }
+
+    .main-section-row .card-section {
+        grid-column: span 3;
+    }
+
+    .main-section-row .history-section {
+        grid-column: span 1;
+    }
+
+    .card-section-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+.history-section {
+    padding: 24px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+}
+
+.history-section .history-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 16px;
+}
+
+.history-section .history-card-header-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.history-section .history-card-header-button {
+    padding: 12px 36px;
+    background: #00A63E;
+    border-radius: 50px;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.history-section .history-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.history-section .history-card-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    gap: 16px;
+    background: #FAFAFA;
+    border-radius: 8px;
+}
+
+.history-section .history-card-item .content {
+    color: #111111;
+}
+
+.history-section .history-card-item .content h6 {
+    font-weight: 400;
+    line-height: 25px;
+    font-size: 18px;
+}
+
+.history-section .history-card-item .content p {
+    color: #5C5C5C;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.history-section .history-card-item .time {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #111111;
 }
