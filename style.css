@@ -351,3 +351,8 @@ header .right-side .right-side-button.right-side-button-active {
     line-height: 25px;
     color: #111111;
 }
+
+.history-card-header-button,
+.heart-icon-container {
+    cursor: pointer;
+}
