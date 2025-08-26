@@ -96,3 +96,36 @@ header .right-side .right-side-button.right-side-button-active {
         --image-size: 30px;
     }
 }
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 12px;
+    background: linear-gradient(90deg, #013223 0%, #006747 49.99%, #013223 100%);
+}
+
+.hero-section div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    color: #FFFFFF;
+}
+
+.hero-section img {
+    width: 90px;
+}
+
+.hero-section .hero-sention-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.hero-section .hero-sention-sub-title {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
