@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    gap: 516px;
+    min-height: 100px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 50px rgba(181, 181, 181, 0.25);
+    min-height: 100px;
+}
+
+header .header-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+header .left-side .site-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+header .left-side .site-logo img {
+    width: 50px;
+    height: 50px;
+}
+
+header .left-side .site-logo div {
+    color: #006747;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+header .left-side .site-logo div span {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+header .right-side {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    height: 52px;
+    flex-wrap: wrap;
+}
+
+header .right-side .right-side-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    gap: 10px;
+    width: 100px;
+    height: 40px;
+    background: rgba(65, 255, 107, 0.1);
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: .75rem;
+}
+
+header .right-side .right-side-button img {
+    --image-size: 20px;
+    width: var(--image-size);
+    height: var(--image-size);
+}
+
+header .right-side .right-side-button.right-side-button-active {
+    background: #00A63E;
+    color: #FFFFFF;
+}
+
+@media (min-width: 992px) {
+    header .right-side .right-side-button {
+        width: 123px;
+        height: 52px;
+        font-size: 1rem;
+    }
+
+    header .right-side .right-side-button img {
+        --image-size: 30px;
+    }
+}
